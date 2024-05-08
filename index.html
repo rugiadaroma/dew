@@ -5,10 +5,22 @@
     <link rel="icon" type="image/svg+xml" href="/dew/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rugiada</title>
-    <script type="module" crossorigin src="/dew/assets/index-DVvLNB1w.js"></script>
-    <link rel="stylesheet" crossorigin href="/dew/assets/index-B0qAAUOo.css">
+    <script type="module" crossorigin src="/dew/assets/main-Bi729eHg.js"></script>
+    <link rel="stylesheet" crossorigin href="/dew/assets/main-B0qAAUOo.css">
   </head>
   <body>
     <div id="root"></div>
+
+    <script>
+      (() => {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+
+
   </body>
 </html>
